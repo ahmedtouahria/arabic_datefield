@@ -1,0 +1,5 @@
+    class Model(models.Model)
+    date_add=models.DateTimeField(auto_now=True)
+    def get_date_arabic(self):
+        months_arabic = ("جانفي","فيفري","مارس","أفريل","ماي","جوان","جويلية","أوت","سبتمبر","أكتوبر","نوفمبر","ديسمبر")
+        return f" {self.date_add.day} {months_arabic[self.date_add.month]} {self.date_add.year} "
